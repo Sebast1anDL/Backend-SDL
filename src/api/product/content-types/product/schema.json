@@ -15,8 +15,7 @@
       "type": "string"
     },
     "slug": {
-      "type": "uid",
-      "targetField": "productName"
+      "type": "uid"
     },
     "description": {
       "type": "text"
@@ -32,8 +31,7 @@
       ]
     },
     "active": {
-      "type": "boolean",
-      "default": true
+      "type": "boolean"
     },
     "price": {
       "type": "decimal"
@@ -41,10 +39,11 @@
     "isFeatured": {
       "type": "boolean"
     },
-    "category": {
+    "brand": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::category.category"
+      "relation": "manyToOne",
+      "target": "api::brand.brand",
+      "inversedBy": "products"
     }
   }
 }
