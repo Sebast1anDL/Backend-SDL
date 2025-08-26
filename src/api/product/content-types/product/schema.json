@@ -46,6 +46,24 @@
       "relation": "manyToOne",
       "target": "api::brand.brand",
       "inversedBy": "products"
+    },
+    "asusBanner": {
+      "type": "boolean"
+    },
+    "samsungBanner": {
+      "type": "boolean"
+    },
+    "iphoneBanner": {
+      "type": "boolean"
+    },
+    "lenovoBanner": {
+      "type": "boolean"
+    },
+    "nextRelease": {
+      "type": "boolean"
+    },
+    "featuredXiaomi": {
+      "type": "boolean"
     }
   }
 }

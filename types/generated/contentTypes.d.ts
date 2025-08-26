@@ -539,25 +539,31 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   };
   attributes: {
     active: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    asusBanner: Schema.Attribute.Boolean;
     brand: Schema.Attribute.Relation<'manyToOne', 'api::brand.brand'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
+    featuredXiaomi: Schema.Attribute.Boolean;
     images: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    iphoneBanner: Schema.Attribute.Boolean;
     isFeatured: Schema.Attribute.Boolean;
+    lenovoBanner: Schema.Attribute.Boolean;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::product.product'
     > &
       Schema.Attribute.Private;
+    nextRelease: Schema.Attribute.Boolean;
     price: Schema.Attribute.Decimal;
     productName: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    samsungBanner: Schema.Attribute.Boolean;
     slug: Schema.Attribute.UID<'productName'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
